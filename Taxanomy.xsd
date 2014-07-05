@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Taxanomy"
+	xmlns:tns="http://www.example.org/Taxanomy" elementFormDefault="qualified">
+	<element name="taxanomys" type="tns:taxanomys" />
+	<complexType name="taxanomys">
+		<sequence>
+			<element name="taxanomy" type="tns:taxanomy" minOccurs="1"
+				maxOccurs="unbounded"></element>
+		</sequence>
+	</complexType>
+	<complexType name="taxanomy">
+		<sequence>
+			<element name="levelName" type="string" minOccurs="1"
+				maxOccurs="1"></element>
+			<element name="levelType" type="int" minOccurs="1" maxOccurs="1"></element>
+			<element name="keywords" type="string" minOccurs="1"
+				maxOccurs="1"></element>
+			<element name="synonym" type="string" minOccurs="0"
+				maxOccurs="1"></element>
+			<element name="parentTaxonomy" type="string" minOccurs="0"
+				maxOccurs="1"></element>
+		</sequence>
+	</complexType>
+</schema>
